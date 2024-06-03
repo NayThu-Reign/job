@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Kadwa';
+    src: url('./fonts/Kadwa/Kadwa-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inder';
+    src: url('./fonts/Inder/Inder-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inknut_Antiqua';
+    src: url('./fonts/Inknut_Antiqua/InknutAntiqua-ExtraBold.ttf');
+}
+

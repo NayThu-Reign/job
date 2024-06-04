@@ -7,7 +7,17 @@ import {
 
 import Logo from "../images/logo-1.png"
 
+import { Link, useLocation } from "react-router-dom"
+
 export default function Header({ theme }) {
+
+    const location = useLocation();
+
+    const activeStyle = {
+      color: '#fffff', // Change this to your desired active color
+    };
+  
+
     return (
         <Box>
             <Box sx={{ position: "relative",width: "100%", height: "820px", }}>
@@ -24,7 +34,7 @@ export default function Header({ theme }) {
                     // background: "#87ceeb",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
-                    zIndex: -1, // Ensure it's behind other content
+                    // zIndex: -1, // Ensure it's behind other content
                 }}>
 
                     <Container 
@@ -84,6 +94,32 @@ export default function Header({ theme }) {
                                     </Typography>
                                 </Box>
                             </Grid>
+                        </Box>
+
+                        <Box sx={{
+                            display: "flex",
+                            gap: "12px"
+                        }}>
+                            <Box sx={{
+                                width: "200px",
+                                height: "60px",
+                                
+                            }}>
+                                <Link to="/" style={{ textDecoration: "none"}}>
+                                    <Typography
+                                        sx={{
+                                            color: location.pathname === '/' ? 'red' : '#222',
+                                            fontWeight: location.pathname === '/' ? 100 : 400,
+                                            fontFamily: "Kadwa",
+                                            fontSize: "20px",
+                                        }}
+                                    
+                                    >
+                                        Home
+                                    </Typography>
+
+                                </Link>
+                            </Box>
                         </Box>
                     </Container>
 
